@@ -1,0 +1,359 @@
+/* ESTILOS GENERALES, FUENTES Y COLORES */
+
+@font-face {
+    font-family: sfpro;
+    src: url(../assets/fonts/sf-pro-display-cufonfonts/SFPRODISPLAYREGULAR.OTF);
+}
+
+@font-face {
+    font-family: sfprobold;
+    src: url(../assets/fonts/sf-pro-display-cufonfonts/SFPRODISPLAYBOLD.OTF);
+}
+
+:root {
+    --azul: #2d4059;
+    --azul-oscuro: #1e2a3b;
+    --rojo: #ea5455;
+    --naranja: #f07b3f;
+    --amarillo: #ffd460;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sfpro;
+    background: linear-gradient(to right, #0b2d1e, #153726);
+}
+
+.contenedor-padre {
+    scroll-snap-type: y mandatory;
+    background-image: url(../assets/img/aurora.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* ESTILOS DE BOOTSTRAP */
+
+.navbar-dark,
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.modal-body {
+    padding-top: 0 !important;
+}
+
+/* PÁGINAS */
+
+.page-section {
+    scroll-snap-align: start;
+}
+
+/* PUNTOS */
+
+.contador-puntos-texto {
+    font-size: 1.6rem;
+    color: #ffffff;
+}
+
+#puntos {
+    font-size: 1.6rem;
+    color: #ffffff;
+}
+
+/* PÁGINA 1 */
+
+/* HEADER */
+
+.cabecera {
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: var(--rojo);
+}
+
+.nav-titulo {
+    font-size: 1.6rem;
+    margin-left: 1rem;
+}
+
+.icono-logo {
+    font-size: 3.5rem;
+}
+
+/* MAIN */
+
+/* TITULO */
+
+.p1-contenido-principal {
+    margin-top: 4rem;
+}
+
+.p1-titulo,
+.p2-titulo,
+.p3-titulo {
+    color: #ffffff;
+    font-size: 3.45rem;
+    margin: 3rem 0;
+}
+
+.p1-titulo-alt {
+    color: var(--amarillo);
+}
+
+/* CONTENIDO GRID */
+
+.p1-contenedor-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 1fr;
+}
+
+.p1-grid-item,
+.p2-grid-item {
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+
+.p1-grid-item:first-child {
+    grid-row: 1/3;
+}
+
+.p1-grid-item:nth-child(2) {
+    grid-column: 2/4;
+}
+
+.p1-grid-item:nth-child(4) {
+    grid-column: 2/5;
+}
+
+.p1-grid-item img,
+.p2-grid-item img {
+    border-radius: 5px;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+/* PÁGINA 2 */
+
+.p2-titulo-alt {
+    color: var(--rojo);
+}
+
+.p2-contenedor {
+    background-image: url(../assets/img/cerebro/brain.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.icon {
+    font-size: 4rem;
+    color: var(--rojo);
+}
+
+.p2-grid-item {
+    cursor: pointer;
+}
+
+.contenedor-cerebro {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    margin-top: 6rem;
+}
+
+.p2-grid-item:first-child {
+    text-align: right;
+    grid-column-start: 2;
+    grid-row-start: 3;
+}
+
+.p2-grid-item:nth-child(2) {
+    text-align: center;
+    grid-column-start: 2;
+    grid-row-start: 4;
+}
+
+.p2-grid-item:nth-child(3) {
+    text-align: right;
+    grid-column-start: 4;
+    grid-row-start: 1;
+}
+
+.p2-grid-item:nth-child(4) {
+    text-align: center;
+    grid-column-start: 6;
+    grid-row-start: 3;
+}
+
+.p2-grid-item:nth-child(5) {
+    text-align: right;
+    grid-column-start: 5;
+    grid-row-start: 5;
+}
+
+.p2-grid-item:last-child {
+    text-align: left;
+    grid-column-start: 7;
+    grid-row-start: 5;
+}
+
+/* PÁGINA 3 */
+
+.p3-contenedor-dificultad {
+    display: flex;
+    flex-direction: column;
+    height: 78vh;
+    margin-top: 6rem;
+}
+
+.p3-contenedor-titulo {
+    border-bottom: 4.5px solid #ffffff;
+}
+
+/* CONTENEDOR TITULO */
+
+.p3-titulo {
+    margin: 2.5rem 0;
+}
+
+.p3-titulo-alt {
+    position: relative;
+    background-color: var(--rojo);
+    padding: 0 0.5rem;
+    top: 5.2rem;
+    left: 0;
+    color: #ffffff;
+    border-radius: 10px;
+}
+
+.p3-titulo-dificultad {
+    margin-top: 2rem;
+    font-size: 1.8rem;
+    color: #ffffff;
+    display: inline-block;
+    border-bottom: 2px solid var(--amarillo);
+}
+
+/* CONTENEDOR OPCIONES */
+
+.contenedor-opciones {
+    display: flex;
+    flex-basis: 100%;
+    text-align: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.p3-opciones {
+    font-size: 2rem;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.facil:hover,
+.intermedio:hover,
+.dificil:hover {
+    cursor: pointer;
+    color: #ffffff;
+    background-color: var(--azul-oscuro);
+    transition: all 1s ease;
+}
+
+.facil {
+    color: var(--amarillo);
+}
+
+.intermedio {
+    color: var(--naranja);
+}
+
+.dificil {
+    color: var(--rojo);
+}
+
+/* PÁGINA 4 JUEGO FÁCIL */
+
+.p4-contenedor-juego-facil {
+    height: 78vh;
+    margin-top: 5.5rem;
+}
+
+.contenedor-rows-cards {
+    height: 100%;
+}
+
+.card {
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 1rem;
+    width: 205px;
+    height: 285px;
+}
+
+.card-facil,
+.card-intermedio,
+.card-dificil {
+    padding: 0 !important;
+}
+
+.card-facil {
+    background-color: var(--amarillo);
+    border: 4px solid var(--amarillo);
+}
+
+.card-intermedio {
+    background-color: var(--naranja);
+    border: 4px solid var(--naranja);
+}
+
+.card-dificil {
+    background-color: var(--rojo);
+    border: 4px solid var(--rojo);
+}
+
+/* JUEGO INTERMEDIO */
+
+/* MEDIA QUERIES */
+
+@media screen and (min-width: 1028px) and (max-width: 1440px) {
+    html {
+        font-size: 85.5%;
+    }
+    .card {
+        cursor: pointer;
+        border-radius: 5px;
+        margin: 1rem;
+        width: 165px;
+        height: 225px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    html {
+        font-size: 72.5%;
+    }
+}
+
+@media screen and (min-width: 425px) and (max-width: 768px) {
+    html {
+        font-size: 65.5%;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    html {
+        font-size: 55.5%;
+    }
+}

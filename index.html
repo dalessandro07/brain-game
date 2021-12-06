@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- FAVICON -->
+        <link rel="shortcut icon" href="./assets/img/favicon.ico" type="image/x-icon" />
+        <!-- FONTS AWESOME ICONS -->
+        <script src="https://kit.fontawesome.com/76fb205747.js" crossorigin="anonymous"></script>
+        <!-- CSS -->
+        <!-- BOOTSTRAP CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+        <!-- MI CSS -->
+        <link rel="stylesheet" href="css/styles.css" />
+        <title>Wow My Brain!</title>
+    </head>
+    <body>
+        <div class="contenedor-padre">
+            <div class="page-section" id="page-1">
+                <header class="cabecera">
+                    <nav class="navbar navbar-expand-lg navbar-dark">
+                        <div class="container-fluid">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <a href="index.html"><i class="fas fa-brain text-white icono-logo"></i></a>
+                                <a class="navbar-brand text-white nav-titulo" href="index.html">WOW MY BRAIN!</a>
+                            </div>
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                <ul class="navbar-nav me-auto mb-2 mb-lg-0 w-100 justify-content-end">
+                                    <li class="nav-item">
+                                        <a class="nav-link active text-white" aria-current="page" href="index.html#page-3">JUGAR</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link text-white" href="#">REGISTRARSE</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link text-white">SOBRE MÍ</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                </header>
+                <main class="p1-contenido-principal container">
+                    <div class="p1-contenedor-titulo">
+                        <h2 class="p1-titulo text-center">¡PRUEBA ESTE <span class="p1-titulo-alt">DIVERTIDO Y RÁPIDO</span> JUEGO DE MEMORIA!</h2>
+                    </div>
+                    <div class="p1-contenedor-grid">
+                        <div class="p1-grid-item">
+                            <img src="./assets/img/memories.jpg" alt="" />
+                        </div>
+                        <div class="p1-grid-item">
+                            <img src="./assets/img/childs.jpg" style="height: 285px" alt="" />
+                        </div>
+                        <div class="p1-grid-item">
+                            <img src="./assets/img/elderly.jpg" alt="" />
+                        </div>
+                        <div class="p1-grid-item">
+                            <img src="./assets/img/child.jpg" style="height: 285px" alt="" />
+                        </div>
+                    </div>
+                </main>
+            </div>
+            <div class="page-section" id="page-2">
+                <main class="p2-contenido-principal container">
+                    <div class="p2-contenedor-titulo">
+                        <h2 class="p2-titulo text-center">¡CONOCE LOS <span class="p2-titulo-alt">INCREÍBLES BENEFICIOS</span> QUE TIENE!</h2>
+                    </div>
+                    <div class="p2-contenedor">
+                        <div class="contenedor-cerebro w-100 justify-content-center h-100 align-items-center">
+                            <span class="p2-grid-item" id="concentracion"><i class="fas fa-flag icon"></i></span>
+                            <span class="p2-grid-item" id="pensar-rapido"><i class="fas fa-flag icon"></i></span>
+                            <span class="p2-grid-item" id="cognitivas"><i class="fas fa-flag icon"></i></span>
+                            <span class="p2-grid-item" id="inteligencia-emocional"><i class="fas fa-flag icon"></i></span>
+                            <span class="p2-grid-item" id="memoria-corto-plazo"><i class="fas fa-flag icon"></i></span>
+                            <span class="p2-grid-item" id="memoria-visual"><i class="fas fa-flag icon"></i></span>
+                        </div>
+                    </div>
+                </main>
+            </div>
+            <div class="page-section" id="page-3">
+                <main class="p3-contenido-principal container">
+                    <div class="p3-contenedor-titulo">
+                        <h2 class="p3-titulo text-center"><span class="p3-titulo-alt">¡INICIAR JUEGO!</span></h2>
+                    </div>
+                    <div class="p3-contenedor-dificultad" id="contenedor-juego">
+                        <div class="contenedor-titulo">
+                            <h3 class="p3-titulo-dificultad">SELECCIONAR DIFICULTAD :</h3>
+                        </div>
+                        <div class="contador-puntos w-100">
+                            <span class="contador-puntos-texto w-100 d-flex justify-content-end">Puntos: <b class="mx-4" id="puntos">0</b></span>
+                        </div>
+                        <div class="contenedor-opciones">
+                            <h4 class="p3-opciones facil" id="btn-facil">FÁCIL (PRINCIPIANTE)</h4>
+                            <h4 class="p3-opciones intermedio" id="btn-intermedio">INTERMEDIO (JUGADOR REGULAR)</h4>
+                            <h4 class="p3-opciones dificil" id="btn-dificil">DIFÍCIL (PROFESIONAL)</h4>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+
+        <!-- TEMPLATE CARDS FACIL CONTENEDOR -->
+
+        <template id="contenedor-juego-facil">
+            <div class="contenedor-rows-cards d-flex flex-wrap">
+                <div class="row w-100 justify-content-around my-4 align-content-center align-items-center contenedor-cards-facil"></div>
+            </div>
+        </template>
+
+        <!-- TEMPLATE CARD FACIL -->
+
+        <template id="cards-facil">
+            <div class="col-12 col-md-12 col-lg-12 col-xl-3 card card-facil">
+                <img class="d-none w-100 h-100 card-imagen" style="object-fit: cover" src="#" alt="" />
+            </div>
+        </template>
+
+        <!-- TEMPLATE CARDS INTERMEDIO CONTENEDOR -->
+
+        <template id="contenedor-juego-intermedio">
+            <div class="contenedor-rows-cards d-flex flex-wrap">
+                <div class="row w-100 justify-content-around my-4 align-content-center align-items-center contenedor-cards-intermedio"></div>
+            </div>
+        </template>
+
+        <!-- TEMPLATE CARD INTERMEDIO -->
+
+        <template id="cards-intermedio">
+            <div class="col-12 col-md-12 col-lg-12 col-xl-3 card card-intermedio">
+                <img class="d-none w-100 h-100 card-imagen" style="object-fit: cover" src="#" alt="" />
+            </div>
+        </template>
+
+        <!-- TEMPLATE CARDS DIFICIL CONTENEDOR -->
+
+        <template id="contenedor-juego-dificil">
+            <div class="contenedor-rows-cards d-flex flex-wrap">
+                <div class="row w-100 justify-content-around my-4 align-content-center align-items-center contenedor-cards-dificil"></div>
+            </div>
+        </template>
+
+        <!-- TEMPLATE CARD DIFICIL -->
+
+        <template id="cards-dificil">
+            <div class="col-12 col-md-12 col-lg-12 col-xl-3 card card-dificil">
+                <img class="d-none w-100 h-100 card-imagen" style="object-fit: cover" src="#" alt="" />
+            </div>
+        </template>
+
+        <!-- JAVASCRIPT -->
+        <!-- BOOTSTRAP JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <!-- JQUERY -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <!-- MI JS -->
+        <script src="js/main.js"></script>
+        <script src="js/brain.js"></script>
+        <script src="js/easy.js"></script>
+        <script src="js/medium.js"></script>
+        <script src="js/hard.js"></script>
+    </body>
+</html>
