@@ -35,6 +35,22 @@ $("#btn-facil").click(function () {
                             puntos++;
                             localStorage.setItem("puntos", puntos);
                             $("#puntos").html(puntos);
+                            shuffleArray(felicidades);
+                            const Toast = Swal.mixin({
+                                toast: true,
+                                position: "top-end",
+                                showConfirmButton: false,
+                                timer: 1500,
+                                timerProgressBar: true,
+                                didOpen: (toast) => {
+                                    toast.addEventListener("mouseenter", Swal.stopTimer);
+                                    toast.addEventListener("mouseleave", Swal.resumeTimer);
+                                },
+                            });
+                            Toast.fire({
+                                icon: "success",
+                                title: `¡${felicidades[0]}, +1 pto!`,
+                            });
                             contenedorCardsAnimales.forEach((cards) => {
                                 if (cards.id === cardsEscogidas[0]) {
                                     setTimeout(function () {
@@ -49,6 +65,23 @@ $("#btn-facil").click(function () {
                             }
                         } else {
                             let contenedorCardsAnimales = contenedorJuego.querySelectorAll(".card-facil");
+                            shuffleArray(errores);
+
+                            const Toast = Swal.mixin({
+                                toast: true,
+                                position: "top-end",
+                                showConfirmButton: false,
+                                timer: 2000,
+                                timerProgressBar: true,
+                                didOpen: (toast) => {
+                                    toast.addEventListener("mouseenter", Swal.stopTimer);
+                                    toast.addEventListener("mouseleave", Swal.resumeTimer);
+                                },
+                            });
+                            Toast.fire({
+                                icon: "error",
+                                title: `¡${errores[0]}, -1 pto!`,
+                            });
                             contenedorCardsAnimales.forEach((cards) => {
                                 setTimeout(function () {
                                     let imagenesCards = cards.children;
