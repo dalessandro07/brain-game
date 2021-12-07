@@ -14,6 +14,7 @@ let esculturasNivelIntermedio = [...datosEsculturasNivelIntermedio, ...datosEscu
 /* JUEGO */
 
 $("#btn-intermedio").click(function () {
+    $(".footer-main").fadeOut();
     function shuffleArray(inputArray) {
         inputArray.sort(() => Math.random() - 0.5);
     }
@@ -25,10 +26,13 @@ $("#btn-intermedio").click(function () {
     setTimeout(function () {
         $("#contenedor-juego").click(function (e) {
             if (e.target.classList.contains("card-intermedio")) {
+                clicks++;
+                localStorage.setItem("clicks", clicks);
+                $("#clicks").html(clicks);
                 e.target.querySelector(".card-imagen").classList.remove("d-none");
                 setTimeout(function () {
                     e.target.querySelector(".card-imagen").classList.add("d-none");
-                }, 1000);
+                }, 5000);
                 cardsEscogidas.push(e.target.id);
                 if (!e.target.querySelector(".card-imagen").classList.contains("d-none")) {
                     if (cardsEscogidas.length === 2) {
@@ -40,7 +44,7 @@ $("#btn-intermedio").click(function () {
                             shuffleArray(felicidades);
                             const Toast = Swal.mixin({
                                 toast: true,
-                                position: "top-end",
+                                position: "top-start",
                                 showConfirmButton: false,
                                 timer: 1500,
                                 timerProgressBar: true,
@@ -69,23 +73,6 @@ $("#btn-intermedio").click(function () {
                         } else {
                             let contenedorCardsEsculturas = contenedorJuego.querySelectorAll(".card-intermedio");
 
-                            shuffleArray(errores);
-
-                            const Toast = Swal.mixin({
-                                toast: true,
-                                position: "top-end",
-                                showConfirmButton: false,
-                                timer: 1500,
-                                timerProgressBar: true,
-                                didOpen: (toast) => {
-                                    toast.addEventListener("mouseenter", Swal.stopTimer);
-                                    toast.addEventListener("mouseleave", Swal.resumeTimer);
-                                },
-                            });
-                            Toast.fire({
-                                icon: "error",
-                                title: `¡${errores[0]}, -1 pto!`,
-                            });
                             contenedorCardsEsculturas.forEach((cards) => {
                                 setTimeout(function () {
                                     let imagenesCards = cards.children;

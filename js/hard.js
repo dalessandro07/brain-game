@@ -12,6 +12,7 @@ let carasNivelDificil = [...datoscarasNivelDificil, ...datoscarasNivelDificil];
 /* JUEGO */
 
 $("#btn-dificil").click(function () {
+    $(".footer-main").fadeOut();
     function shuffleArray(inputArray) {
         inputArray.sort(() => Math.random() - 0.5);
     }
@@ -23,10 +24,13 @@ $("#btn-dificil").click(function () {
     setTimeout(function () {
         $("#contenedor-juego").click(function (e) {
             if (e.target.classList.contains("card-dificil")) {
+                clicks++;
+                localStorage.setItem("clicks", clicks);
+                $("#clicks").html(clicks);
                 e.target.querySelector(".card-imagen").classList.remove("d-none");
                 setTimeout(function () {
                     e.target.querySelector(".card-imagen").classList.add("d-none");
-                }, 750);
+                }, 3500);
                 cardsEscogidas.push(e.target.id);
                 if (!e.target.querySelector(".card-imagen").classList.contains("d-none")) {
                     if (cardsEscogidas.length === 2) {
@@ -38,7 +42,7 @@ $("#btn-dificil").click(function () {
                             shuffleArray(felicidades);
                             const Toast = Swal.mixin({
                                 toast: true,
-                                position: "top-end",
+                                position: "top-start",
                                 showConfirmButton: false,
                                 timer: 1500,
                                 timerProgressBar: true,
@@ -66,14 +70,14 @@ $("#btn-dificil").click(function () {
                         } else {
                             let contenedorCardscaras = contenedorJuego.querySelectorAll(".card-dificil");
                             puntos--;
-
                             $("#puntos").html(puntos);
+                            localStorage.setItem("puntos", puntos);
 
                             shuffleArray(errores);
 
                             const Toast = Swal.mixin({
                                 toast: true,
-                                position: "top-end",
+                                position: "top-start",
                                 showConfirmButton: false,
                                 timer: 1500,
                                 timerProgressBar: true,

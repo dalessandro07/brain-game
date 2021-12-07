@@ -3,12 +3,20 @@ let felicidades = ["EXCELENTE", "INCREÍBLE", "MUY BIEN", "GENIAL", "ASOMBROSO",
 let errores = ["CASI", "ESTUVO CERCA", "YO TAMBIÉN ME CONFUNDÍ", "INTÉNTALO DE NUEVO", "ESA NO ES", "SON PARECIDAS PERO NO IGUALES", "POR POCO", "NO CLICKEES TAN RÁPIDO"];
 
 let puntos;
+let clicks;
 
 if (localStorage.getItem("puntos")) {
     puntos = localStorage.getItem("puntos");
     $("#puntos").html(puntos);
 } else {
     puntos = 0;
+}
+
+if (localStorage.getItem("clicks")) {
+    clicks = localStorage.getItem("clicks");
+    $("#clicks").html(clicks);
+} else {
+    clicks = 0;
 }
 
 const contenedorJuego = document.getElementById("contenedor-juego");

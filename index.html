@@ -29,14 +29,14 @@
                                 <span class="navbar-toggler-icon"></span>
                             </button>
                             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                                <ul class="navbar-nav me-auto mb-2 mb-lg-0 w-100 justify-content-end">
-                                    <li class="nav-item">
+                                <ul class="navbar-nav me-auto mb-2 mt-4 mb-lg-0 w-100 justify-content-end">
+                                    <li class="nav-item text-center">
                                         <a class="nav-link active text-white" aria-current="page" href="index.html#page-3">JUGAR</a>
                                     </li>
-                                    <li class="nav-item">
+                                    <li class="nav-item text-center">
                                         <a class="nav-link text-white" href="#">REGISTRARSE</a>
                                     </li>
-                                    <li class="nav-item">
+                                    <li class="nav-item text-center">
                                         <a class="nav-link text-white">SOBRE MÍ</a>
                                     </li>
                                 </ul>
@@ -92,14 +92,55 @@
                         </div>
                         <div class="contador-puntos w-100">
                             <span class="contador-puntos-texto w-100 d-flex justify-content-end">Puntos: <b class="mx-4" id="puntos">0</b></span>
+                            <span class="contador-puntos-texto w-100 d-flex justify-content-end">Clicks: <b class="mx-4" id="clicks">0</b></span>
                         </div>
                         <div class="contenedor-opciones">
                             <h4 class="p3-opciones facil" id="btn-facil">FÁCIL (PRINCIPIANTE)</h4>
                             <h4 class="p3-opciones intermedio" id="btn-intermedio">INTERMEDIO (JUGADOR REGULAR)</h4>
-                            <h4 class="p3-opciones dificil" id="btn-dificil">DIFÍCIL (PROFESIONAL)</h4>
+                            <h4 class="p3-opciones dificil" id="btn-dificil">DIFÍCIL (PROFESIONAL - PIERDES PUNTOS SI ERRAS)</h4>
                         </div>
                     </div>
                 </main>
+                <footer class="container-fluid footer-main">
+                    <div class="contenedor-principal-footer">
+                        <div class="item-footer redes d-flex flex-column justify-content-around">
+                            <h3 class="titulo-redes" style="color: #fff">Redes Sociales:</h3>
+                            <ul class="lista-redes">
+                                <li class="lista-redes-item"><i class="lista-redes-icono fa fa-whatsapp"></i>WhatsApp</li>
+                                <li class="lista-redes-item"><i class="lista-redes-icono fa fa-envelope"></i>E-mail</li>
+                                <li class="lista-redes-item"><i class="lista-redes-icono fa fa-github"></i>GitHub</li>
+                                <li class="lista-redes-item"><i class="lista-redes-icono fa fa-linkedin"></i>LinkedIn</li>
+                            </ul>
+                        </div>
+                        <div class="item-footer contacto d-flex align-items-center justify-content-center">
+                            <form>
+                                <div class="mb-3">
+                                    <label for="exampleInputEmail1" class="form-label">Correo Electrónico</label>
+                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+                                    <div id="emailHelp" class="form-text">No compartiré tu correo con nadie más.</div>
+                                </div>
+                                <div class="mb-3">
+                                    <div class="form-floating">
+                                        <textarea class="form-control" placeholder="Deja aquí tu mensaje" id="floatingTextarea" style="resize: none; height: 120px"></textarea>
+                                        <label for="floatingTextarea">Mensaje</label>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-around">
+                                    <button type="submit" class="btn boton-formulario">Enviar</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="item-footer footer-logo d-flex flex-column align-items-center justify-content-around">
+                            <h3 class="titulo-logo">Oh My Brain!</h3>
+                            <i class="fas fa-brain" style="font-size: 12rem; color: #ffffff"></i>
+                        </div>
+                    </div>
+                    <div class="copyright-footer text-center" style="padding: 3rem 0 1rem 0">
+                        <h4 style="color: #fff; padding-top: 1rem; border-top: 1px solid #ffffff">
+                            Powered By: <a style="text-decoration: none" href="https://github.com/dalessandro07" target="_blank"><strong class="ale">Alessandro Rios &copy</strong></a>
+                        </h4>
+                    </div>
+                </footer>
             </div>
         </div>
 

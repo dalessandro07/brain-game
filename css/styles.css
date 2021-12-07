@@ -65,7 +65,8 @@ body {
     color: #ffffff;
 }
 
-#puntos {
+#puntos,
+#clicks {
     font-size: 1.6rem;
     color: #ffffff;
 }
@@ -147,7 +148,7 @@ body {
 /* PÁGINA 2 */
 
 .p2-titulo-alt {
-    color: var(--rojo);
+    color: var(--naranja);
 }
 
 .p2-contenedor {
@@ -323,7 +324,118 @@ body {
     border: 4px solid var(--rojo);
 }
 
-/* JUEGO INTERMEDIO */
+/* FOOTER */
+
+.footer-main {
+    min-height: 25vh;
+    margin-top: 8rem;
+    background-color: var(--rojo);
+}
+
+.contenedor-principal-footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+}
+
+.item-footer {
+    text-align: center;
+}
+
+/* REDES */
+
+.titulo-redes {
+    width: 75%;
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.lista-redes {
+    list-style-type: none;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.lista-redes-item {
+    display: flex;
+    justify-content: center;
+    padding: 0 1rem;
+    margin: 0.5rem 0;
+    color: #ffffff;
+    font-size: 1.8rem;
+}
+
+.lista-redes-icono {
+    font-size: 1.85rem;
+    font-size: 2rem;
+    padding-top: 0.3rem;
+    margin: 0 2rem;
+}
+
+.footer-logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.titulo-logo {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/* CONTACTO */
+
+.contacto {
+    height: 110%;
+}
+
+.contacto form {
+    width: 80%;
+}
+
+.form-text,
+.form-label {
+    font-size: 1.45rem;
+    color: #ffffff;
+}
+
+.form-floating label {
+    color: var(--azul);
+}
+
+#emailHelp {
+    text-align: left;
+    font-size: 1.2rem;
+}
+
+#floatingTextarea {
+    font-size: 1.45rem;
+}
+
+.boton-formulario {
+    background-color: var(--rojo);
+    outline: 2px solid var(--amarillo);
+    color: var(--amarillo);
+}
+
+.boton-formulario:hover {
+    transition: all 0.5s;
+    background-color: var(--amarillo);
+    color: var(--rojo);
+}
+
+/* COPYRIGHT */
+
+.ale {
+    font-family: sfprobold;
+    color: #ffffff;
+}
+
+.ale:hover {
+    border-bottom: 2px solid var(--amarillo);
+}
 
 /* MEDIA QUERIES */
 
@@ -346,14 +458,48 @@ body {
     }
 }
 
-@media screen and (min-width: 425px) and (max-width: 768px) {
+@media screen and (min-width: 426px) and (max-width: 768px) {
     html {
         font-size: 65.5%;
     }
+    .contenedor-principal-footer {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+    .footer-logo {
+        margin-top: 2rem;
+        grid-column: 2;
+        grid-row: 1;
+    }
+    .contacto {
+        grid-column: 1/3;
+    }
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 426px) {
     html {
         font-size: 55.5%;
+    }
+    .contenedor-principal-footer {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+    .titulo-redes {
+        width: 100%;
+    }
+    .footer-logo {
+        margin-top: 2rem;
+        grid-column: 2;
+        grid-row: 1;
+    }
+    .contacto {
+        grid-column: 1/3;
+    }
+    .p2-grid-item:nth-child(3) {
+        text-align: right;
+        grid-column-start: 4;
+        grid-row-start: 2;
     }
 }
