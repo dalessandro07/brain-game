@@ -29,7 +29,7 @@
                                 <span class="navbar-toggler-icon"></span>
                             </button>
                             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                                <ul class="navbar-nav me-auto mb-2 mt-4 mb-lg-0 w-100 justify-content-end">
+                                <ul class="navbar-nav me-auto mb-2 mb-lg-0 w-100 justify-content-end">
                                     <li class="nav-item text-center">
                                         <a class="nav-link active text-white" aria-current="page" href="index.html#page-3">JUGAR</a>
                                     </li>
@@ -106,27 +106,41 @@
                         <div class="item-footer redes d-flex flex-column justify-content-around">
                             <h3 class="titulo-redes" style="color: #fff">Redes Sociales:</h3>
                             <ul class="lista-redes">
-                                <li class="lista-redes-item"><i class="lista-redes-icono fa fa-whatsapp"></i>WhatsApp</li>
-                                <li class="lista-redes-item"><i class="lista-redes-icono fa fa-envelope"></i>E-mail</li>
-                                <li class="lista-redes-item"><i class="lista-redes-icono fa fa-github"></i>GitHub</li>
-                                <li class="lista-redes-item"><i class="lista-redes-icono fa fa-linkedin"></i>LinkedIn</li>
+                                <li class="lista-redes-item">
+                                    <a style="text-decoration: none; color: #ffffff" target="_blank" href="https://api.whatsapp.com/send?phone=51986307201&text=%C2%A1Hola+Alessandro!+me+gust%C3%B3+t%C3%BA+sitio+web+%22Oh+My+Brain%22.+"
+                                        ><i class="lista-redes-icono fa fa-whatsapp"></i>WhatsApp</a
+                                    >
+                                </li>
+                                <li class="lista-redes-item">
+                                    <a style="text-decoration: none; color: #ffffff" target="_blank" href="mailto:drios28@outlook.es?subject=Sitio%20Web%20OhMyBrain!"><i class="lista-redes-icono fa fa-envelope"></i>E-mail</a>
+                                </li>
+                                <li class="lista-redes-item">
+                                    <a style="text-decoration: none; color: #ffffff" target="_blank" href="https://github.com/dalessandro07"> <i class="lista-redes-icono fa fa-github"></i>GitHub </a>
+                                </li>
+                                <li class="lista-redes-item">
+                                    <a style="text-decoration: none; color: #ffffff" target="_blank" href="https://www.linkedin.com/in/alessandro-rios/"> <i class="lista-redes-icono fa fa-linkedin"></i>LinkedIn</a>
+                                </li>
                             </ul>
                         </div>
                         <div class="item-footer contacto d-flex align-items-center justify-content-center">
-                            <form>
+                            <form action="https://formsubmit.co/drios28@outlook.es" method="POST">
+                                <input type="text" name="_honey" style="display: none" />
+                                <input type="hidden" name="_template" value="table" />
+                                <input type="hidden" name="_autoresponse" value="¡Muchas gracias por el mensaje! | Si necesitas algo no dudes en contactarme: https://dalessandro07.github.io/personal-contact/" />
+                                <input type="hidden" name="_next" value="https://dalessandro07.github.io/brain-game/" />
                                 <div class="mb-3">
-                                    <label for="exampleInputEmail1" class="form-label">Correo Electrónico</label>
-                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+                                    <label for="exampleInputEmail1" class="form-label">¡Escríbeme un feedback!</label>
+                                    <input name="email" type="email" placeholder="Correo Electrónico" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
                                     <div id="emailHelp" class="form-text">No compartiré tu correo con nadie más.</div>
                                 </div>
                                 <div class="mb-3">
                                     <div class="form-floating">
-                                        <textarea class="form-control" placeholder="Deja aquí tu mensaje" id="floatingTextarea" style="resize: none; height: 120px"></textarea>
+                                        <textarea name="mensaje" class="form-control" placeholder="Deja aquí tu mensaje" id="floatingTextarea" style="resize: none; height: 120px"></textarea>
                                         <label for="floatingTextarea">Mensaje</label>
                                     </div>
                                 </div>
                                 <div class="d-flex justify-content-around">
-                                    <button type="submit" class="btn boton-formulario">Enviar</button>
+                                    <button type="submit" id="btn-form-contact" class="btn boton-formulario">Enviar</button>
                                 </div>
                             </form>
                         </div>
@@ -205,5 +219,6 @@
         <script src="js/easy.js"></script>
         <script src="js/medium.js"></script>
         <script src="js/hard.js"></script>
+        <script src="js/validaciones.js"></script>
     </body>
 </html>
