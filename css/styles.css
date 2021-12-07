@@ -71,6 +71,44 @@ body {
     color: #ffffff;
 }
 
+/* TEMPORIZADOR */
+
+.titulo-tiempo {
+    color: #ffffff;
+    font-size: 4.25rem;
+    text-align: center;
+}
+
+.texto-tiempo {
+    color: #ffffff;
+    font-size: 2.25rem;
+    text-align: center;
+}
+
+.boton-volver {
+    color: #ffffff;
+    font-size: 1.65rem;
+    outline: 3px solid var(--amarillo);
+}
+
+.boton-volver:hover {
+    transition: all 0.45s;
+    background-color: var(--amarillo);
+    color: var(--azul);
+}
+
+.boton-volver:focus {
+    box-shadow: none;
+}
+
+.warning {
+    color: var(--amarillo);
+}
+
+.danger {
+    color: var(--rojo);
+}
+
 /* PÁGINA 1 */
 
 /* HEADER */
@@ -401,17 +439,34 @@ body {
     color: #ffffff;
 }
 
-.form-floating label {
-    color: var(--azul);
-}
-
 #emailHelp {
     text-align: left;
     font-size: 1.2rem;
 }
 
+#exampleInputEmail1 {
+    background-color: var(--rojo);
+    border: 2px solid var(--amarillo);
+    color: #ffffff;
+}
+
+#exampleInputEmail1::placeholder,
+#floatingTextarea::placeholder,
+.textAreaFloat {
+    color: #ffffff;
+}
+
 #floatingTextarea {
+    background-color: var(--rojo);
+    border: 2px solid var(--amarillo);
+    color: #ffffff;
     font-size: 1.45rem;
+}
+
+#floatingTextarea:focus,
+#exampleInputEmail1:focus {
+    box-shadow: none;
+    border: 2px solid var(--azul);
 }
 
 .boton-formulario {
@@ -424,6 +479,10 @@ body {
     transition: all 0.5s;
     background-color: var(--amarillo);
     color: var(--rojo);
+}
+
+.boton-formulario:focus {
+    box-shadow: none;
 }
 
 /* COPYRIGHT */

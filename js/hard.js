@@ -12,6 +12,9 @@ let carasNivelDificil = [...datoscarasNivelDificil, ...datoscarasNivelDificil];
 /* JUEGO */
 
 $("#btn-dificil").click(function () {
+    let temporizador = new Temporizador(360);
+    temporizador.conteoSegundos();
+
     $(".footer-main").fadeOut();
     function shuffleArray(inputArray) {
         inputArray.sort(() => Math.random() - 0.5);
@@ -35,7 +38,7 @@ $("#btn-dificil").click(function () {
                 if (!e.target.querySelector(".card-imagen").classList.contains("d-none")) {
                     if (cardsEscogidas.length === 2) {
                         if (cardsEscogidas[0] === cardsEscogidas[1]) {
-                            let contenedorCardscaras = contenedorJuego.querySelectorAll(".card-dificil");
+                            let contenedorCardsCaras = contenedorJuego.querySelectorAll(".card-dificil");
                             puntos++;
                             localStorage.setItem("puntos", puntos);
                             $("#puntos").html(puntos);
@@ -55,20 +58,20 @@ $("#btn-dificil").click(function () {
                                 icon: "success",
                                 title: `¡${felicidades[0]}, +1 pto!`,
                             });
-                            contenedorCardscaras.forEach((cards) => {
+                            contenedorCardsCaras.forEach((cards) => {
                                 if (cards.id === cardsEscogidas[0]) {
                                     setTimeout(function () {
                                         cards.remove();
                                     }, 500);
                                 }
                             });
-                            if (contenedorCardscaras.length === 2) {
+                            if (contenedorCardsCaras.length === 2) {
                                 setTimeout(function () {
                                     window.location.reload();
                                 }, 1000);
                             }
                         } else {
-                            let contenedorCardscaras = contenedorJuego.querySelectorAll(".card-dificil");
+                            let contenedorCardsCaras = contenedorJuego.querySelectorAll(".card-dificil");
                             puntos--;
                             $("#puntos").html(puntos);
                             localStorage.setItem("puntos", puntos);
@@ -91,7 +94,7 @@ $("#btn-dificil").click(function () {
                                 title: `¡${errores[0]}, -1 pto!`,
                             });
 
-                            contenedorCardscaras.forEach((cards) => {
+                            contenedorCardsCaras.forEach((cards) => {
                                 setTimeout(function () {
                                     let imagenesCards = cards.children;
                                     for (let imagen of imagenesCards) {

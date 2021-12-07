@@ -91,7 +91,10 @@
                             <h3 class="p3-titulo-dificultad">SELECCIONAR DIFICULTAD :</h3>
                         </div>
                         <div class="contador-puntos w-100">
-                            <span class="contador-puntos-texto w-100 d-flex justify-content-end">Puntos: <b class="mx-4" id="puntos">0</b></span>
+                            <div class="d-flex">
+                                <span class="mt-4 contador-puntos-texto w-100 d-flex justify-content-start">Tiempo: <b class="ms-3 me-2" id="temporizador-segundos">¡Inicia el juego!</b></span>
+                                <span class="mt-4 contador-puntos-texto w-100 d-flex justify-content-end">Puntos: <b class="mx-4" id="puntos">0</b></span>
+                            </div>
                             <span class="contador-puntos-texto w-100 d-flex justify-content-end">Clicks: <b class="mx-4" id="clicks">0</b></span>
                         </div>
                         <div class="contenedor-opciones">
@@ -130,13 +133,13 @@
                                 <input type="hidden" name="_next" value="https://dalessandro07.github.io/brain-game/" />
                                 <div class="mb-3">
                                     <label for="exampleInputEmail1" class="form-label">¡Escríbeme un feedback!</label>
-                                    <input name="email" type="email" placeholder="Correo Electrónico" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+                                    <input maxlength="80" name="email" type="email" placeholder="Correo Electrónico" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
                                     <div id="emailHelp" class="form-text">No compartiré tu correo con nadie más.</div>
                                 </div>
                                 <div class="mb-3">
                                     <div class="form-floating">
-                                        <textarea name="mensaje" class="form-control" placeholder="Deja aquí tu mensaje" id="floatingTextarea" style="resize: none; height: 120px"></textarea>
-                                        <label for="floatingTextarea">Mensaje</label>
+                                        <textarea maxlength="350" name="mensaje" class="form-control" placeholder=" " id="floatingTextarea" style="resize: none; height: 120px"></textarea>
+                                        <label class="textAreaFloat" for="floatingTextarea">Mensaje</label>
                                     </div>
                                 </div>
                                 <div class="d-flex justify-content-around">

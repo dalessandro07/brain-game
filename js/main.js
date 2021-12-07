@@ -31,3 +31,37 @@ const templateContenedorCardsDificil = document.getElementById("contenedor-juego
 const templateCardsDificil = document.getElementById("cards-dificil").content;
 
 const fragment = document.createDocumentFragment();
+
+/* TEMPORIZADOR */
+class Temporizador {
+    constructor(inicio) {
+        this.inicio = inicio;
+        this.contador = this.inicio;
+    }
+
+    conteoSegundos = function () {
+        if (this.contador < 0) {
+            this.conteoSegundos = null;
+            contenedorJuego.innerHTML = "";
+            contenedorJuego.innerHTML = `<div class="h-100 d-flex flex-column justify-content-around align-content-center align-items-center">
+                    <h2 class="titulo-tiempo">¡Se te acabó el tiempo! 😥</h2>
+                    <p class="texto-tiempo">¡Estuviste cerca, no te rindas!</p>
+                    <button class="btn boton-volver" id="volver">Intentarlo de Nuevo</button>
+                </div>`;
+            return;
+        } else if (this.contador < 60 && this.contador > 25) {
+            $(`#temporizador-segundos`).addClass("warning");
+        } else if (this.contador < 25) {
+            $(`#temporizador-segundos`).removeClass("warning");
+            $(`#temporizador-segundos`).addClass("danger");
+        }
+        $(`#temporizador-segundos`).html(`${this.contador--} segundos`);
+        setTimeout(this.conteoSegundos.bind(this), 1000);
+    };
+}
+
+$(() => {
+    $("#volver").click(() => {
+        window.location.reload();
+    });
+});
