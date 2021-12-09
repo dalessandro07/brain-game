@@ -61,6 +61,10 @@ body {
 
 /* JUEGO */
 
+#jugar {
+    margin-top: 1.2px;
+}
+
 .sin-cuenta {
     display: block;
     margin: 2rem 0;
@@ -260,7 +264,28 @@ body {
     grid-row-start: 5;
 }
 
+.flex-item-brain {
+    width: 50%;
+    justify-self: center;
+    align-self: center;
+}
+
+.modal-text {
+    text-align: justify;
+    border-bottom: 0.75rem solid var(--amarillo);
+}
+
+.modal-text > b {
+    border-bottom: 2px solid var(--naranja);
+}
+
 /* PÁGINA 3 */
+
+.bienvenida-usuario-titulo {
+    font-size: 2.8rem;
+    text-align: right;
+    color: var(--rojo);
+}
 
 .p3-contenedor-dificultad {
     display: flex;

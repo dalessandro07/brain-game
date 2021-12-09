@@ -2,6 +2,9 @@
 
 if (localStorage.getItem("Contraseña")) {
     $(".contador-puntos").html(" ");
+    $("#contenedor-juego").prepend(`
+    <h3 class="bienvenida-usuario-titulo">¡Bienvenido! ${localStorage.getItem("Usuario")}</h3>
+    `);
     $(".contador-puntos").append(
         `<div class="d-flex">
             <span class="mt-4 contador-puntos-texto w-100 d-flex justify-content-start">Tiempo: <b class="ms-3 me-2" id="temporizador-segundos">¡Inicia el juego!</b></span>

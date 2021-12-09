@@ -20,7 +20,7 @@ let datos = [
     {
         id: "inteligencia-emocional",
         titulo: "Potencian el desarrollo de la inteligencia emocional",
-        info: "Cada juego está acompañado por la expectativa concreta de lograr un objetivo. Pero en este camino hacia la meta se producen distintas situaciones posibles. Tal vez el jugador no logre el fin previsto. Y, en ese caso, afronta la frustración que este hecho le produce. Por tanto, los juegos de memoria también potencian el autoconocimiento y la inteligencia emocional.",
+        info: "Cada juego está acompañado por la expectativa concreta de lograr un objetivo. Pero en este camino hacia la meta se producen distintas situaciones posibles. <b>Tal vez el jugador no logre el fin previsto. Y, en ese caso, afronta la frustración que este hecho le produce.</b> Por tanto, los juegos de memoria también potencian el autoconocimiento y la inteligencia emocional.",
         imagen: "./assets/img/cerebro/inteligencia-emocional.jpg",
     },
     {
@@ -53,9 +53,9 @@ for (let dato of datos) {
                         </h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                    <div class="modal-body">
-                        <img class="w-100" height="250" src="${dato.imagen}" style="object-fit:cover;">
-                        <p class="modal-text" style="padding-top: 1.5rem">${dato.info}</p>
+                    <div class="modal-body d-flex">
+                        <img class="flex-item-brain" height="250" src="${dato.imagen}" style="object-fit:cover;">
+                        <p class="m-4 pb-2 modal-text flex-item-brain" style="padding-top: 1.5rem">${dato.info}</p>
                     </div>
                 </div>
             </div>
