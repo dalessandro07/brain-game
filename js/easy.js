@@ -12,9 +12,10 @@ let animalesNivelFacil = [...datosAnimalesNivelFacil, ...datosAnimalesNivelFacil
 /* JUEGO */
 
 $("#btn-facil").click(function () {
-    let temporizador = new Temporizador(180);
+    let temporizador = new Temporizador(60);
     temporizador.conteoSegundos();
 
+    $(".cabecera").fadeOut();
     $(".footer-main").fadeOut();
     function shuffleArray(inputArray) {
         inputArray.sort(() => Math.random() - 0.5);

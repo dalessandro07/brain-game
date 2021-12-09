@@ -17,148 +17,192 @@
     </head>
     <body>
         <div class="contenedor-padre">
-            <div class="page-section" id="page-1">
-                <header class="cabecera">
-                    <nav class="navbar navbar-expand-lg navbar-dark">
-                        <div class="container-fluid">
-                            <div class="d-flex justify-content-between align-items-center">
-                                <a href="index.html"><i class="fas fa-brain text-white icono-logo"></i></a>
-                                <a class="navbar-brand text-white nav-titulo" href="index.html">WOW MY BRAIN!</a>
-                            </div>
-                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                                <span class="navbar-toggler-icon"></span>
-                            </button>
-                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                                <ul class="navbar-nav me-auto mb-2 mb-lg-0 w-100 justify-content-end">
-                                    <li class="nav-item text-center">
-                                        <a class="nav-link active text-white" aria-current="page" href="index.html#page-3">JUGAR</a>
-                                    </li>
-                                    <li class="nav-item text-center">
-                                        <a class="nav-link text-white" href="#">REGISTRARSE</a>
-                                    </li>
-                                    <li class="nav-item text-center">
-                                        <a class="nav-link text-white">SOBRE MÍ</a>
-                                    </li>
-                                </ul>
-                            </div>
+            <header class="cabecera">
+                <nav class="navbar navbar-expand-lg navbar-dark">
+                    <div class="container-fluid">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <a href="index.html"><i class="fas fa-brain text-white icono-logo"></i></a>
+                            <a class="navbar-brand text-white nav-titulo" href="index.html">WOW MY BRAIN!</a>
                         </div>
-                    </nav>
-                </header>
-                <main class="p1-contenido-principal container">
-                    <div class="p1-contenedor-titulo">
-                        <h2 class="p1-titulo text-center">¡PRUEBA ESTE <span class="p1-titulo-alt">DIVERTIDO Y RÁPIDO</span> JUEGO DE MEMORIA!</h2>
-                    </div>
-                    <div class="p1-contenedor-grid">
-                        <div class="p1-grid-item">
-                            <img src="./assets/img/memories.jpg" alt="" />
-                        </div>
-                        <div class="p1-grid-item">
-                            <img src="./assets/img/childs.jpg" style="height: 285px" alt="" />
-                        </div>
-                        <div class="p1-grid-item">
-                            <img src="./assets/img/elderly.jpg" alt="" />
-                        </div>
-                        <div class="p1-grid-item">
-                            <img src="./assets/img/child.jpg" style="height: 285px" alt="" />
-                        </div>
-                    </div>
-                </main>
-            </div>
-            <div class="page-section" id="page-2">
-                <main class="p2-contenido-principal container">
-                    <div class="p2-contenedor-titulo">
-                        <h2 class="p2-titulo text-center">¡CONOCE LOS <span class="p2-titulo-alt">INCREÍBLES BENEFICIOS</span> QUE TIENE!</h2>
-                    </div>
-                    <div class="p2-contenedor">
-                        <div class="contenedor-cerebro w-100 justify-content-center h-100 align-items-center">
-                            <span class="p2-grid-item" id="concentracion"><i class="fas fa-flag icon"></i></span>
-                            <span class="p2-grid-item" id="pensar-rapido"><i class="fas fa-flag icon"></i></span>
-                            <span class="p2-grid-item" id="cognitivas"><i class="fas fa-flag icon"></i></span>
-                            <span class="p2-grid-item" id="inteligencia-emocional"><i class="fas fa-flag icon"></i></span>
-                            <span class="p2-grid-item" id="memoria-corto-plazo"><i class="fas fa-flag icon"></i></span>
-                            <span class="p2-grid-item" id="memoria-visual"><i class="fas fa-flag icon"></i></span>
-                        </div>
-                    </div>
-                </main>
-            </div>
-            <div class="page-section" id="page-3">
-                <main class="p3-contenido-principal container">
-                    <div class="p3-contenedor-titulo">
-                        <h2 class="p3-titulo text-center"><span class="p3-titulo-alt">¡INICIAR JUEGO!</span></h2>
-                    </div>
-                    <div class="p3-contenedor-dificultad" id="contenedor-juego">
-                        <div class="contenedor-titulo">
-                            <h3 class="p3-titulo-dificultad">SELECCIONAR DIFICULTAD :</h3>
-                        </div>
-                        <div class="contador-puntos w-100">
-                            <div class="d-flex">
-                                <span class="mt-4 contador-puntos-texto w-100 d-flex justify-content-start">Tiempo: <b class="ms-3 me-2" id="temporizador-segundos">¡Inicia el juego!</b></span>
-                                <span class="mt-4 contador-puntos-texto w-100 d-flex justify-content-end">Puntos: <b class="mx-4" id="puntos">0</b></span>
-                            </div>
-                            <span class="contador-puntos-texto w-100 d-flex justify-content-end">Clicks: <b class="mx-4" id="clicks">0</b></span>
-                        </div>
-                        <div class="contenedor-opciones">
-                            <h4 class="p3-opciones facil" id="btn-facil">FÁCIL (PRINCIPIANTE)</h4>
-                            <h4 class="p3-opciones intermedio" id="btn-intermedio">INTERMEDIO (JUGADOR REGULAR)</h4>
-                            <h4 class="p3-opciones dificil" id="btn-dificil">DIFÍCIL (PROFESIONAL - PIERDES PUNTOS SI ERRAS)</h4>
-                        </div>
-                    </div>
-                </main>
-                <footer class="container-fluid footer-main">
-                    <div class="contenedor-principal-footer">
-                        <div class="item-footer redes d-flex flex-column justify-content-around">
-                            <h3 class="titulo-redes" style="color: #fff">Redes Sociales:</h3>
-                            <ul class="lista-redes">
-                                <li class="lista-redes-item">
-                                    <a style="text-decoration: none; color: #ffffff" target="_blank" href="https://api.whatsapp.com/send?phone=51986307201&text=%C2%A1Hola+Alessandro!+me+gust%C3%B3+t%C3%BA+sitio+web+%22Oh+My+Brain%22.+"
-                                        ><i class="lista-redes-icono fa fa-whatsapp"></i>WhatsApp</a
-                                    >
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0 w-100 justify-content-end">
+                                <li class="nav-item text-center">
+                                    <a id="jugar" class="nav-link active text-white" aria-current="page" href="#">JUGAR</a>
                                 </li>
-                                <li class="lista-redes-item">
-                                    <a style="text-decoration: none; color: #ffffff" target="_blank" href="mailto:drios28@outlook.es?subject=Sitio%20Web%20OhMyBrain!"><i class="lista-redes-icono fa fa-envelope"></i>E-mail</a>
-                                </li>
-                                <li class="lista-redes-item">
-                                    <a style="text-decoration: none; color: #ffffff" target="_blank" href="https://github.com/dalessandro07"> <i class="lista-redes-icono fa fa-github"></i>GitHub </a>
-                                </li>
-                                <li class="lista-redes-item">
-                                    <a style="text-decoration: none; color: #ffffff" target="_blank" href="https://www.linkedin.com/in/alessandro-rios/"> <i class="lista-redes-icono fa fa-linkedin"></i>LinkedIn</a>
+                                <li class="nav-item text-center">
+                                    <a href="#" class="btn nav-link text-white btn-a-registro" id="boton-registro">REGISTRARSE</a>
                                 </li>
                             </ul>
                         </div>
-                        <div class="item-footer contacto d-flex align-items-center justify-content-center">
-                            <form action="https://formsubmit.co/drios28@outlook.es" method="POST">
-                                <input type="text" name="_honey" style="display: none" />
-                                <input type="hidden" name="_template" value="table" />
-                                <input type="hidden" name="_autoresponse" value="¡Muchas gracias por el mensaje! | Si necesitas algo no dudes en contactarme: https://dalessandro07.github.io/personal-contact/" />
-                                <input type="hidden" name="_next" value="https://dalessandro07.github.io/brain-game/" />
-                                <div class="mb-3">
-                                    <label for="exampleInputEmail1" class="form-label">¡Escríbeme un feedback!</label>
-                                    <input maxlength="80" name="email" type="email" placeholder="Correo Electrónico" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
-                                    <div id="emailHelp" class="form-text">No compartiré tu correo con nadie más.</div>
-                                </div>
-                                <div class="mb-3">
-                                    <div class="form-floating">
-                                        <textarea maxlength="350" name="mensaje" class="form-control" placeholder=" " id="floatingTextarea" style="resize: none; height: 120px"></textarea>
-                                        <label class="textAreaFloat" for="floatingTextarea">Mensaje</label>
+                    </div>
+                </nav>
+            </header>
+            <main>
+                <div class="page-section" id="page-1">
+                    <main class="p1-contenido-principal container">
+                        <div class="p1-contenedor-titulo">
+                            <h2 class="p1-titulo text-center">¡PRUEBA ESTE <span class="p1-titulo-alt">DIVERTIDO Y RÁPIDO</span> JUEGO DE MEMORIA!</h2>
+                        </div>
+                        <div class="p1-contenedor-grid">
+                            <div class="p1-grid-item">
+                                <img src="./assets/img/memories.jpg" alt="" />
+                            </div>
+                            <div class="p1-grid-item">
+                                <img src="./assets/img/childs.jpg" style="height: 285px" alt="" />
+                            </div>
+                            <div class="p1-grid-item">
+                                <img src="./assets/img/elderly.jpg" alt="" />
+                            </div>
+                            <div class="p1-grid-item">
+                                <img src="./assets/img/child.jpg" style="height: 285px" alt="" />
+                            </div>
+                        </div>
+                    </main>
+                </div>
+                <div class="page-section" id="page-2">
+                    <main class="p2-contenido-principal container">
+                        <div class="p2-contenedor-titulo">
+                            <h2 class="p2-titulo text-center">¡CONOCE LOS <span class="p2-titulo-alt">INCREÍBLES BENEFICIOS</span> QUE TIENE!</h2>
+                        </div>
+                        <div class="p2-contenedor">
+                            <div class="contenedor-cerebro w-100 justify-content-center h-100 align-items-center">
+                                <span class="p2-grid-item" id="concentracion"><i class="fas fa-flag icon"></i></span>
+                                <span class="p2-grid-item" id="pensar-rapido"><i class="fas fa-flag icon"></i></span>
+                                <span class="p2-grid-item" id="cognitivas"><i class="fas fa-flag icon"></i></span>
+                                <span class="p2-grid-item" id="inteligencia-emocional"><i class="fas fa-flag icon"></i></span>
+                                <span class="p2-grid-item" id="memoria-corto-plazo"><i class="fas fa-flag icon"></i></span>
+                                <span class="p2-grid-item" id="memoria-visual"><i class="fas fa-flag icon"></i></span>
+                            </div>
+                        </div>
+                    </main>
+                </div>
+                <div class="page-section d-none" id="page-3">
+                    <main class="p3-contenido-principal container">
+                        <div class="p3-contenedor-titulo">
+                            <h2 class="p3-titulo text-center"><span class="p3-titulo-alt">¡INICIAR JUEGO!</span></h2>
+                        </div>
+                        <div class="p3-contenedor-dificultad" id="contenedor-juego">
+                            <div class="contenedor-titulo">
+                                <h3 class="p3-titulo-dificultad">SELECCIONAR DIFICULTAD :</h3>
+                            </div>
+                            <div class="contador-puntos w-100">
+                                <a href="#" class="btn-a-registro sin-cuenta">¡Regístrate para sumar tus puntos!</a>
+                            </div>
+                            <div class="contenedor-opciones">
+                                <h4 class="p3-opciones facil" id="btn-facil">FÁCIL (PRINCIPIANTE)</h4>
+                                <h4 class="p3-opciones intermedio" id="btn-intermedio">INTERMEDIO (JUGADOR REGULAR)</h4>
+                                <h4 class="p3-opciones dificil" id="btn-dificil">DIFÍCIL (PROFESIONAL - PIERDES PUNTOS SI ERRAS)</h4>
+                            </div>
+                        </div>
+                    </main>
+                </div>
+                <div class="page-section d-none" id="page-4">
+                    <div class="container-form" id="contenedor-registro">
+                        <form class="form-registro">
+                            <div class="mb-3">
+                                <h1 class="p1-titulo text-center">¡Regístrate!</h1>
+                                <div class="d-flex flex-column correo-container">
+                                    <div class="col-auto">
+                                        <label for="inputPassword6" class="col-form-label">Correo</label>
+                                    </div>
+                                    <div class="col-auto">
+                                        <input maxlength="80" name="email" type="email" placeholder="Correo Electrónico" class="form-control" id="exampleInputEmail2" aria-describedby="emailHelp" required />
+                                        <div id="emailHelp2" class="form-text">No compartiré tu correo con nadie más.</div>
                                     </div>
                                 </div>
-                                <div class="d-flex justify-content-around">
-                                    <button type="submit" id="btn-form-contact" class="btn boton-formulario">Enviar</button>
+                            </div>
+                            <div class="mt-3 mb-3">
+                                <div class="d-flex flex-column correo-container">
+                                    <div class="col-auto">
+                                        <label for="inputPassword6" class="col-form-label">Nombre de Usuario</label>
+                                    </div>
+                                    <div class="col-auto">
+                                        <input id="username" onkeypress="return /[a-z; 0-9]/i.test(event.key)" minlength="6" maxlength="20" name="username" type="text" placeholder="Nombre de Usuario" class="form-control" required />
+                                    </div>
+                                    <div class="col-auto">
+                                        <span id="passwordHelpInline2" class="form-text">Debe incluir números pero no caracteres especiales</span>
+                                    </div>
                                 </div>
-                            </form>
-                        </div>
-                        <div class="item-footer footer-logo d-flex flex-column align-items-center justify-content-around">
-                            <h3 class="titulo-logo">Oh My Brain!</h3>
-                            <i class="fas fa-brain" style="font-size: 12rem; color: #ffffff"></i>
-                        </div>
+                            </div>
+                            <div class="mb-3">
+                                <div class="form-floating">
+                                    <div class="d-flex flex-column password-container">
+                                        <div class="col-auto">
+                                            <label for="inputPassword6" class="col-form-label">Contraseña</label>
+                                        </div>
+                                        <div class="col-auto">
+                                            <input onkeypress="return /[a-z; 0-9]/i.test(event.key)" type="password" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline" minlength="8" maxlength="20" required />
+                                        </div>
+                                        <div class="col-auto">
+                                            <span id="passwordHelpInline" class="form-text">Debe tener entre 8 y 20 caracteres.</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-around">
+                                <button type="submit" id="btn-form-register" class="btn boton-registro">Registrarse</button>
+                            </div>
+                        </form>
                     </div>
-                    <div class="copyright-footer text-center" style="padding: 3rem 0 1rem 0">
-                        <h4 style="color: #fff; padding-top: 1rem; border-top: 1px solid #ffffff">
-                            Powered By: <a style="text-decoration: none" href="https://github.com/dalessandro07" target="_blank"><strong class="ale">Alessandro Rios &copy</strong></a>
-                        </h4>
+                </div>
+            </main>
+            <footer class="container-fluid footer-main">
+                <div class="contenedor-principal-footer">
+                    <div class="item-footer redes d-flex flex-column justify-content-around">
+                        <h3 class="titulo-redes" style="color: #fff">Redes Sociales:</h3>
+                        <ul class="lista-redes">
+                            <li class="lista-redes-item">
+                                <a style="text-decoration: none; color: #ffffff" target="_blank" href="https://api.whatsapp.com/send?phone=51986307201&text=%C2%A1Hola+Alessandro!+me+gust%C3%B3+t%C3%BA+sitio+web+%22Oh+My+Brain%22.+"
+                                    ><i class="lista-redes-icono fa fa-whatsapp"></i>WhatsApp</a
+                                >
+                            </li>
+                            <li class="lista-redes-item">
+                                <a style="text-decoration: none; color: #ffffff" target="_blank" href="mailto:drios28@outlook.es?subject=Sitio%20Web%20OhMyBrain!"><i class="lista-redes-icono fa fa-envelope"></i>E-mail</a>
+                            </li>
+                            <li class="lista-redes-item">
+                                <a style="text-decoration: none; color: #ffffff" target="_blank" href="https://github.com/dalessandro07"> <i class="lista-redes-icono fa fa-github"></i>GitHub </a>
+                            </li>
+                            <li class="lista-redes-item">
+                                <a style="text-decoration: none; color: #ffffff" target="_blank" href="https://www.linkedin.com/in/alessandro-rios/"> <i class="lista-redes-icono fa fa-linkedin"></i>LinkedIn</a>
+                            </li>
+                        </ul>
                     </div>
-                </footer>
-            </div>
+                    <div class="item-footer contacto d-flex align-items-center justify-content-center">
+                        <form action="https://formsubmit.co/drios28@outlook.es" method="POST">
+                            <input type="text" name="_honey" style="display: none" />
+                            <input type="hidden" name="_template" value="table" />
+                            <input type="hidden" name="_autoresponse" value="¡Muchas gracias por el mensaje! | Si necesitas algo no dudes en contactarme: https://dalessandro07.github.io/personal-contact/" />
+                            <input type="hidden" name="_next" value="https://dalessandro07.github.io/brain-game/" />
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">¡Escríbeme un feedback!</label>
+                                <input maxlength="80" name="email" type="email" placeholder="Correo Electrónico" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+                                <div id="emailHelp" class="form-text">No compartiré tu correo con nadie más.</div>
+                            </div>
+                            <div class="mb-3">
+                                <div class="form-floating">
+                                    <textarea maxlength="350" name="mensaje" class="form-control" placeholder=" " id="floatingTextarea" style="resize: none; height: 120px"></textarea>
+                                    <label class="textAreaFloat" for="floatingTextarea">Mensaje</label>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-around">
+                                <button type="submit" id="btn-form-contact" class="btn boton-formulario">Enviar</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="item-footer footer-logo d-flex flex-column align-items-center justify-content-around">
+                        <h3 class="titulo-logo">Oh My Brain!</h3>
+                        <i class="fas fa-brain" style="font-size: 12rem; color: #ffffff"></i>
+                    </div>
+                </div>
+                <div class="copyright-footer text-center" style="padding: 3rem 0 1rem 0">
+                    <h4 style="color: #fff; padding-top: 1rem; border-top: 1px solid #ffffff">
+                        Powered By: <a style="text-decoration: none" href="https://github.com/dalessandro07" target="_blank"><strong class="ale">Alessandro Rios &copy</strong></a>
+                    </h4>
+                </div>
+            </footer>
         </div>
 
         <!-- TEMPLATE CARDS FACIL CONTENEDOR -->
@@ -223,5 +267,6 @@
         <script src="js/medium.js"></script>
         <script src="js/hard.js"></script>
         <script src="js/validaciones.js"></script>
+        <script src="js/register.js"></script>
     </body>
 </html>

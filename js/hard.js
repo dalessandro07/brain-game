@@ -15,6 +15,7 @@ $("#btn-dificil").click(function () {
     let temporizador = new Temporizador(360);
     temporizador.conteoSegundos();
 
+    $(".cabecera").fadeOut();
     $(".footer-main").fadeOut();
     function shuffleArray(inputArray) {
         inputArray.sort(() => Math.random() - 0.5);

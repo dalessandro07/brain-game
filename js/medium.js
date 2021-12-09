@@ -14,9 +14,10 @@ let esculturasNivelIntermedio = [...datosEsculturasNivelIntermedio, ...datosEscu
 /* JUEGO */
 
 $("#btn-intermedio").click(function () {
-    let temporizador = new Temporizador(240);
+    let temporizador = new Temporizador(120);
     temporizador.conteoSegundos();
 
+    $(".cabecera").fadeOut();
     $(".footer-main").fadeOut();
     function shuffleArray(inputArray) {
         inputArray.sort(() => Math.random() - 0.5);

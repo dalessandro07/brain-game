@@ -27,14 +27,11 @@ body {
     padding: 0;
     box-sizing: border-box;
     font-family: sfpro;
-    background: linear-gradient(to right, #0b2d1e, #153726);
+    background-color: var(--azul);
 }
 
 .contenedor-padre {
     scroll-snap-type: y mandatory;
-    background-image: url(../assets/img/aurora.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 /* ESTILOS DE BOOTSTRAP */
@@ -52,10 +49,24 @@ body {
     padding-top: 0 !important;
 }
 
+.btn:focus {
+    box-shadow: none;
+}
+
 /* PÁGINAS */
 
 .page-section {
     scroll-snap-align: start;
+}
+
+/* JUEGO */
+
+.sin-cuenta {
+    display: block;
+    margin: 2rem 0;
+    text-align: center;
+    font-size: 2.4rem;
+    color: #92fd70;
 }
 
 /* PUNTOS */
@@ -117,6 +128,7 @@ body {
     position: sticky;
     top: 0;
     left: 0;
+    z-index: 9999;
     background-color: var(--rojo);
 }
 
@@ -494,6 +506,37 @@ body {
 
 .ale:hover {
     border-bottom: 2px solid var(--amarillo);
+}
+
+/* SECCION REGISTRO */
+
+.form-registro {
+    width: 55%;
+    margin: 0 auto;
+}
+
+.password-container,
+.correo-container {
+    width: 65%;
+    margin: 0 auto;
+}
+
+.col-form-label {
+    color: #ffffff;
+    font-size: 1.45rem;
+}
+
+.boton-registro {
+    margin-top: 2rem;
+    color: #ffffff;
+    font-size: 1.35rem;
+    background-color: var(--rojo);
+}
+
+.boton-registro:hover {
+    color: #ffffff;
+    transform: translateY(6px);
+    transition: all 0.5s ease;
 }
 
 /* MEDIA QUERIES */
